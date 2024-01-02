@@ -33,3 +33,5 @@ hostname = yjaoxapi.cevt.show
 
 // $done()
 $notify("视频链接捕获成功", "点击此通知在线观看", "视频还没开始播放之前会通知1-4次", 'https://www.baidu.com/');
+$notify('1','2','3','https://www.baidu.com/');
+$done()
