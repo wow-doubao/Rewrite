@@ -22,8 +22,8 @@ const url = $request.url
 const newToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lc3RhbXAiOjE3MDM3MzQ4NDA4MzI4NzAwMDAsInVpZCI6MjI3MzA0NTh9.CCormhIlooOQJZyJq2qz_SdBKViiOww0Hib2Y-A-jY4";
 
 const updatedUrl = replaceTokenInUrl(url, newToken);
-console.log(`视频链接捕获成功:${updatedUrl}`)
 $notify("视频链接捕获成功", "点击此通知在线观看", "视频还没开始播放之前会通知1-4次", updatedUrl);
+console.log(`视频链接捕获成功:${updatedUrl}`)
 
 function replaceTokenInUrl(url, newToken) {
   let matchResult = url.match(/^(.*\.m3u8)/);
