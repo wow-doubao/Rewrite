@@ -12,8 +12,7 @@
 ^https:\/\/is5x9\.cc.*\.m3u8 url script-request-header https://raw.githubusercontent.com/wow-doubao/Rewrite/main/m3u8/yjdm.js
 
 [mitm]
-hostname = yjaoxapi.cevt.show
-hostname = is5x9.cc
+hostname = yjaoxapi.cevt.show,is5x9.cc
 
 *************************************/
 const headers = $request.headers
