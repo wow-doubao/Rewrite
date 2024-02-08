@@ -10,9 +10,10 @@
 [rewrite_local]
 ^https:\/\/yjaoxapi\.cevt\.show.*\.m3u8 url script-request-header https://raw.githubusercontent.com/wow-doubao/Rewrite/main/m3u8/yjdm.js
 ^https:\/\/is5x9\.cc.*\.m3u8 url script-request-header https://raw.githubusercontent.com/wow-doubao/Rewrite/main/m3u8/yjdm.js
+^https:\/\/monster\.weizhen\.pub.*\.m3u8 url script-request-header https://raw.githubusercontent.com/wow-doubao/Rewrite/main/m3u8/yjdm.js
 
 [mitm]
-hostname = yjaoxapi.cevt.show,is5x9.cc
+hostname = yjaoxapi.cevt.show,is5x9.cc,monster.weizhen.pub
 
 *************************************/
 const headers = $request.headers
