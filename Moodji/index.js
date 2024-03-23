@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/moodji.api.flowzland.com\/\/moodjiallinone\/v1\/getproductlist url script-response-body https://raw.githubusercontent.com/qwe1187292926/MyQuantumultXRewrite/feture-moodji-20240302/Moodji/skin.js
+^https?:\/\/moodji.api.flowzland.com\/\/moodjiallinone\/v1\/getownproductlist url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/main/Moodji/index.js
 
 [mitm]
 hostname = moodji.api.flowzland.com
@@ -28,7 +28,7 @@ let ownSkinList = ['vip', 'default']
 initScript()
 
 function initScript() {
-  let body = JSON.parse(resp.body), products = body.products;
+  let body = JSON.parse(resp.body), products = body.products || [];
 
   let savedSkinList = $.getdata(`${ScriptIdentifier}_own_skin_id_list`)
   $.log("savedSkinList->[" + savedSkinList + ']')
