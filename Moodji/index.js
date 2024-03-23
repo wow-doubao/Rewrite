@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/moodji.api.flowzland.com\/\/moodjiallinone\/v1\/getownproductlist url script-response-body https://raw.githubusercontent.com/qwe1187292926/MyQuantumultXRewrite/feture-moodji-20240302/Moodji/skin.js
+^https?:\/\/moodji.api.flowzland.com\/\/moodjiallinone\/v1\/getownproductlist url script-response-body https://raw.githubusercontent.com/qwe1187292926/MyQuantumultXRewrite/main/Moodji/skin.js
 
 [mitm]
 hostname = moodji.api.flowzland.com
