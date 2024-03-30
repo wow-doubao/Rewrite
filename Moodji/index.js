@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/moodji.api.flowzland.com\/\/moodjiallinone\/v1\/getownproductlist url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/main/Moodji/index.js
+^https?:\/\/moodji.api.flowzland.com\/\/moodjiallinone\/v1\/getownproductlist url script-response-body https://raw.githubusercontent.com/qwe1187292926/MyQuantumultXRewrite/feture-moodji-20240302/Moodji/skin.js
 
 [mitm]
 hostname = moodji.api.flowzland.com
@@ -23,24 +23,27 @@ const resp = isUndefined($response) ? null : $response;
 
 // 获取皮肤列表的客户端参数
 const clientVersion = "2.0.0.0", skinType = 28;
-let ownSkinList = ['vip', 'default']
+let bannedSkinList = ['vip', 'default']
 
 initScript()
 
 function initScript() {
   let body = JSON.parse(resp.body), products = body.products || [];
+  $.log(`body:${body}`)
+  $.log(`productList:${products}`)
+
+  for (let i = 0; i < products.length; i++) {
+    if (!bannedSkinList.includes(products[i].productId)) {
+      bannedSkinList.push(products[i].productId);
+    }
+  }
 
   let savedSkinList = $.getdata(`${ScriptIdentifier}_own_skin_id_list`)
   $.log("savedSkinList->[" + savedSkinList + ']')
   if (('undefined' == typeof savedSkinList) || savedSkinList === '') {
     $.log("上次保存皮肤为空，开始获取皮肤信息")
-    for (let i = 0; i < products.length; i++) {
-      if (!ownSkinList.includes(products[i].productId)) {
-        ownSkinList.push(products[i].productId);
-      }
-    }
-    savedSkinList = ownSkinList
-    $.log("当前皮肤信息{}", JSON.stringify(ownSkinList))
+    savedSkinList = bannedSkinList
+    $.log("当前皮肤信息{}", JSON.stringify(bannedSkinList))
   } else {
     try {
       savedSkinList = JSON.parse(savedSkinList)
@@ -52,10 +55,17 @@ function initScript() {
   let noticeCount = 0, noticeSkin = '';
   getAllSkinList(res.headers, (result) => {
     if (result.success) {
+      $.log("获取到的全部皮肤列表{}", JSON.stringify(result.data))
+      let idNum = products.length
+      $.log(products)
+      $.log(bannedSkinList)
       for (let i = 0; i < result.data.length; i++) {
-        if (!ownSkinList.includes(result.data[i].skinId)) {
+        $.log(result.data[i].skinId, !products.includes(result.data[i].skinId), !bannedSkinList.includes(result.data[i].skinId))
+        if (!bannedSkinList.includes(result.data[i].skinId)) {
           let skin = {
+            id: idNum++,
             seed: "",
+            initTime: 1709220187,
             count: 1,
             productId: result.data[i].skinId,
             type: 2,
