@@ -4,7 +4,7 @@
 解锁会员权益
 [rewrite_local]
 
-https://www.pdreamer.com/aymyProd/api/getUserInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/rwmm.js
+https://www.pdreamer.com/aymyProd/api/getUserInfo url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/refs/heads/main/rwmm/rwmm.js
 
 [mitm] 
 
