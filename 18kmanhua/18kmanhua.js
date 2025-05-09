@@ -4,7 +4,7 @@
 https://boyseman.top 
 
 [rewrite_local]
-https:\/\/boyseman\.top\/api\/(chaptersDetails|memberDetails|videoDetails) url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/main/18kmanhua/18kmanhua.js
+https:\/\/boyseman\.top\/api\/(chaptersDetails|memberDetails|videoDetails) url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/refs/heads/main/18kmanhua/18kmanhua.js
 [mitm]
 hostname = boyseman.top
 */
