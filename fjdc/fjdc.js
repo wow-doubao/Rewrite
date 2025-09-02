@@ -17,9 +17,9 @@ hostname = schoolapi.xutongkeji.com
 
 const obj = JSON.parse($response.body);
 
-chxm1023.data = {
+obj.data = {
   ...obj.data,
   "expireDate" : "2099-09-09",
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(obj)});
