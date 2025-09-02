@@ -20,6 +20,8 @@ const obj = JSON.parse($response.body);
 obj.data = {
   ...obj.data,
   "expireDate" : "2099-09-09",
+  "status": 1,
+  "username": 'wow'
 };
 
 $done({body : JSON.stringify(obj)});
