@@ -1,12 +1,12 @@
 /*
 2025.5.9
 18k漫画 
-https://boyseman.top 
+https://ajse691.top/
 
 [rewrite_local]
-https:\/\/boyseman\.top\/api\/(chaptersDetails|memberDetails|videoDetails) url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/refs/heads/main/18kmanhua/18kmanhua.js
+https:\/\/ajse691\.top\/api\/(chaptersDetails|memberDetails|videoDetails) url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/refs/heads/main/18kmanhua/18kmanhua.js
 [mitm]
-hostname = boyseman.top
+hostname = ajse691.top
 */
 
 
