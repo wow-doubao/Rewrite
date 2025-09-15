@@ -1,12 +1,11 @@
 /*
 2025.5.9
-18k漫画 
-https://ajse691.top/
+18k漫画 https://18akmanhua.com/
 
 [rewrite_local]
-https:\/\/ajse691\.top\/api\/(chaptersDetails|memberDetails|videoDetails) url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/refs/heads/main/18kmanhua/18kmanhua.js
+https:\/\/18akmanhua\.com\/api\/(chaptersDetails|memberDetails|videoDetails) url script-response-body https://raw.githubusercontent.com/wow-doubao/Rewrite/refs/heads/main/18kmanhua/18kmanhua.js
 [mitm]
-hostname = ajse691.top
+hostname = 18akmanhua.com
 */
 
 
